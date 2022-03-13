@@ -6,7 +6,6 @@
 저랑 맞팔해용 <br>
 [이건 제 인스타 주소에용](https://www.instagram.com/serin.vv/)
 <br>
-![저희집 강아지에여](IMG_1701.JPG) 
 <br>
 #### **멋사 사랑해요**
 ~~메롱메롱~~
