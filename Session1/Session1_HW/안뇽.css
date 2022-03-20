@@ -1,0 +1,18 @@
+body {
+  background-image: url('http://file.instiz.net/data/cached_img/upload/a/1/a/a1a78376710a212505f48190ad8a80d0.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* 사실 위에 있는 사진이 색밖에 없으니 아래처럼 background-color로 설정하는 것도 괜찮을 듯 */
+  /* 밑에 걸로 설정해보려면 위에 있는 세 개 'cmd + /' 로 주석처리하고 아래 거 주석 해제해보세요 */
+  /* background-color: rgb(235, 169, 202); */
+}
+
+.main-title {
+  text-align: center;
+}
+
+.body-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
