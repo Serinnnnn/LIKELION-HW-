@@ -1,0 +1,29 @@
+.entire {
+    
+    
+}
+
+.container1 {
+    width:300px;
+    display: flex;
+
+    /* display:inline-flex; */
+    /* flex-direction: row; */
+}
+
+.container2 {
+    width:300px;
+    display:flex;
+    justify-content: flex-end;
+    /* display:inline-flex; */
+    /* flex-direction: row; */
+    ;
+}
+
+.box {
+    height: 50px;
+    width: 50px;
+    background-color: rgb(110, 110, 210);
+    border-radius: 5px;
+}
+

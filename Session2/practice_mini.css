@@ -1,0 +1,10 @@
+div {
+    color: pink;
+}
+p{
+    color: purple;
+
+}
+.part_3 > p {
+    color: blue;
+}

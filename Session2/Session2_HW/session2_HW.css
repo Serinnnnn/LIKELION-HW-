@@ -1,0 +1,129 @@
+.material-icons-outlined {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+.namebar {
+  display: flex;
+  justify-content: flex-start;
+  width: 300px;
+  height: 52px
+}
+
+h2 {
+  position: relative;
+  bottom: 20px;
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  width: 400px;
+  margin-left: 150px;
+}
+
+.number {
+  display: flex;
+  justify-content: space-around;
+}
+
+.profile {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body {
+  width: 336px;
+  
+  
+}
+  
+
+.profile-detail {
+  height: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right:10px;
+}
+
+.profile-detail > p {
+  margin: 0px;
+}
+
+.profile-number {
+  width: max-content;
+  font-weight: 700;
+}
+
+.profile >  img{
+  padding-right: 34px;
+}
+
+.univlink{
+  color: rgb(9, 66, 151);
+
+}
+
+.message > p{
+  margin-bottom: 8px;
+}
+
+.edit{
+  border: 1px solid rgb(197, 185, 185) ;
+  width: 286px;
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size:smaller;
+  font-weight: 600;
+ ;
+}
+
+.edit > p {
+  margin: 2px 2px 2px 100px
+}
+
+.box{
+  display: flex
+}
+
+.box > .material-icons-outlined{
+  border: 1px solid rgb(197, 185, 185);
+  margin-left: 5px;
+}
+
+.highlight{
+  display: flex;
+  justify-content: space-around;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-around;
+  margin: 4px;
+}
+
+.underbar {
+  display: flex;
+  justify-content: space-between;
+}
+
