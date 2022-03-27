@@ -5,6 +5,8 @@ for i in range(1, 11, 1):
         continue
     print(i)
 
+
+
 # #while 문을 사용하여 아래와 같이 별을 표시하는 프로그램을 작성해주세요
 # # *
 # # **
@@ -17,6 +19,9 @@ count = 1
 while count<6:
     print("*" * count)
     count += 1
+
+
+
 
 # #입력받은 줄 수 만큼 별을 오른쪽 정렬로 표시하는 프로그램을 작성해주세요
 # # 예:
