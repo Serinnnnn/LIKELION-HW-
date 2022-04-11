@@ -1,0 +1,43 @@
+body{
+    font-family: 'Dongle', sans-serif;
+    font-size: 27px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 203px;
+    margin-right: 476px;
+
+
+}
+
+.container{
+    color: rgb(102, 99, 99);
+    border: 1px solid rgb(217, 243, 166);
+    border-radius: 30px;
+    width: 450px;
+    height: 300px;
+    margin-left: 13px;
+    background-color: rgb(217, 243, 166);
+}
+
+.todo_title{
+    position:relative;
+    left:40px;
+}
+
+.todo_content{
+    position: relative;
+    left: 40px;
+
+}
+
+.deadline{
+    position: relative;
+    left: 25px;
+
+}
+
+.links{
+    position:relative;
+    left:20px;
+    margin-top: 15px;
+}

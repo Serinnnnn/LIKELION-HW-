@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Dongle', sans-serif;
+    font-size: 27px;
+    border: 3px solid rgb(179, 173, 173);
+    border-radius: 52px;
+    background-color: #ffdfeac4;
+    color:rgba(73, 71, 71, 0.782);
+    margin-left: 203px;
+    margin-right: 476px;
+}
+
+h1{
+    margin-bottom:0px;
+    position:relative;
+    left:100px;
+}
+
+.list{
+    position: relative;
+    bottom: 23px;
+    left: 154px
+}
+
+.link{
+    position: relative;
+    bottom: 39px;
+    left: 160px;
+    
+}

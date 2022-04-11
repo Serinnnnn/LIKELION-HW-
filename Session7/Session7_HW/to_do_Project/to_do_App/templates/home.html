@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    {% load static %}
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" rel=styleseet href="{% static 'home.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class= "title"><h1>🌷To-do list🌷</h1></div>
+    <div class="list">
+        <ul>
+            {% for To_do in To_dos %}
+                <a href = "{% url 'detail' To_do.pk %}"> 
+                    <li>
+                        {{To_do.title}} 
+                        {{To_do.dday}} 
+                    </li>
+                </a>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="link"><a href="{% url 'new' %}"> ✔️Create To-do list  </a></div>
+    
+
+</body>
+
+</html>

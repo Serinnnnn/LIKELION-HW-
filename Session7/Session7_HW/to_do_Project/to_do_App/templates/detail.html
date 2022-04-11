@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" rel=styleseet href="{% static 'detail.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class=deadline>⏰Deadline: {{Todo_deadline}}<br>🌷{{ Todo.dday }} </div>
+    
+          
+    <div class="container">
+        <div class="todo_title">
+            <h3>▪️Title:  {{ Todo.title }} </h3>
+        </div>
+
+        <div class="todo_content">
+            <h3>▪️Content: <br> {{ Todo.content }}</h3>
+        </div>
+
+    </div>
+    
+    <div class="links">
+        <a href=" {% url 'home' %}">홈으로</a>
+        <a href="{% url 'edit' Todo.pk %}">수정하기</a>
+        <a href="{% url 'delete' Todo.pk %}">삭제하기</a>
+    </div>
+    
+
+</body>
+</html>
