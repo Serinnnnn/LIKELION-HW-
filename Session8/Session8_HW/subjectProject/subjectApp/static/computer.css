@@ -1,0 +1,9 @@
+body{
+    font-family: 'Jua', sans-serif;
+}
+
+ol {
+    border: 1px solid salmon;
+    width:400px;
+    border-radius: 10px 10px 10px 10px;
+}

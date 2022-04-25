@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    {% load static %}
+<head>
+    
+<link rel="stylesheet" href="{% static 'home.css' %}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&family=Jua&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>📚모든 전공📚</h2>
+
+    <div>
+        <a href="{% url 'addMajor' %}">전공 추가</a>
+        <div class="majorlist">
+            <ol>
+            {% for major in majors %}
+                <li>{{major.title}}</li>
+                <a href="{% url 'editMajor' major.pk %}" class="button">수정</a>
+                <a href="{% url 'deleteMajor' major.pk %}" class="button">삭제</a>
+                
+            {% endfor %}
+            </ol>
+        </div>
+    </div>
+    
+
+    <h2>📖모든 과목📖</h2>
+    <a href = "{% url 'addSubject' %}"> 과목 추가</a>
+
+    <div class ="subjectlist">
+        <ol>
+        {% for subject in subjects %}
+        <li> {{ subject.subject_name}} | {{subject.major}}| {{subject.prof_name}}
+            <a href="{% url 'editSubject' subject.pk %}" class="button">수정</a>
+            <a href="{% url 'deleteSubject' subject.pk %}" class="button">삭제</a>
+            <br><br>
+            <div>{{subject.memo}}</div>
+            
+        </li>
+        {% endfor %}
+        </ol>
+    </div>
+</body>
+</html>
