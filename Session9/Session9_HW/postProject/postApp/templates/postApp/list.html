@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'list.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&family=Gowun+Batang:wght@700&family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
+
+
+    <title>게시물 목록</title>
+</head>
+<body>
+    <div class="title">
+        <h1>📓BLOG📓</h1>
+    </div>
+
+    <div class="posts">
+        {% for post in posts %}
+        <a class = "post_title" href="{% url 'detail' post.pk  %}">
+            <ul>
+                <li>
+                {{post.title}}
+                </li>
+            </ul>
+        </a>
+        {% endfor %}
+    </div>
+    
+    <a class="url" href= "{%url 'new'%}">글쓰러 고고씽💨</a>
+</body>
+</html>
