@@ -1,23 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+    {% extends 'postApp/base.html' %}
 
-<head>
+    {% block css %}
     {% load static %}
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" type="text/css" href="{% static 'list.css' %}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&family=Gowun+Batang:wght@700&family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
+    {% endblock css %}
 
-
-    <title>게시물 목록</title>
-</head>
-<body>
-    <div class="title">
+    {% block title %}
         <h1>📓BLOG📓</h1>
-    </div>
+    {% endblock title %}
+
+    {% block content %}
 
     <div class="posts">
         {% for post in posts %}
@@ -32,5 +25,5 @@
     </div>
     
     <a class="url" href= "{%url 'new'%}">글쓰러 고고씽💨</a>
-</body>
-</html>
+
+    {% endblock content %}

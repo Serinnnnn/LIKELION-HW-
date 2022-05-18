@@ -22,5 +22,21 @@
     <a href= "{% url 'edit' post.pk %}">수정</a>
     <a href= "{% url 'delete' post.pk %}">삭제</a>
     
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="content" placeholder="댓글을 입력해주세요.">
+        <button type="submit">작성</button>
+    </form>
+   
+    {% for comment in post.comments.all %}
+    <li>
+        {{comment.content}}
+        <a href="{% url 'delete-comment' post.pk comment.pk%}">삭제</a>
+    </li>
+    {% endfor %}
+
+
+
+
 </body>
 </html>
