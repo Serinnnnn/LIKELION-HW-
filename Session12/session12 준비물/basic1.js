@@ -1,0 +1,31 @@
+/*
+1. 프로퍼티 합 구하는 코드 작성하기
+-> 아래 객체 속 모든 팀원의 월급을 합한 값을 구하고, 그 값을 변수 sum에 저장해주는 코드를 작성해보세요!
+[Hint]
+※ salaries가 비어있다면 sum에 0이 저장되어야 합니다.
+※ 반복문을 사용해보세요.
+※ 객체의 값을 참조하는 방법을 떠올려보세요! */
+
+let salaries = {
+  John: 100,
+  Ann: 160,
+  Pete: 130,
+};
+
+
+/*
+  여기에 1번 문제의 정답 코드를 작성해보세요. 
+*/
+
+let sum = 0;
+for (let key in salaries) {
+  sum += salaries[key];
+}
+
+// 대괄호 표기법 -> object 가져오는 방식--객체가 반복문으로 출력하기때문에 하나의 key를 가져올 수 없으므로 . 으로 불러올 수 없다
+// 
+
+let sum = 0;
+for (let key in salaries) {
+  sum += salaries[key];
+}

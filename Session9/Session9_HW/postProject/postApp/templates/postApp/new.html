@@ -1,18 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    {% load static %}
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{% static 'new.css' %}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&family=Gowun+Batang:wght@700&family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
+{% extends 'postApp/base.html' %}
 
-    <title>new</title>
-</head>
-<body>
+{% block css %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'new.css' %}">
+{% endblock css %}
+
+{% block title %}
+<h1>📓NEW POST📓</h1>
+{% endblock title %}
+
+{% block content %}
     <form method="POST">
     {% csrf_token %}
     <label for="title">제목</label>
@@ -25,8 +22,5 @@
     <br>
     <button type="submit">작성</button>
     </form>
-
-</body>
-</html>
-
+{% endblock content %}
 

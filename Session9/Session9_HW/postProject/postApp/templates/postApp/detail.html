@@ -1,42 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    {% load static %}
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{% static 'detail.css' %}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&family=Gowun+Batang:wght@700&family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
+{% extends 'postApp/base.html' %}
 
-    <title>글 상세 페이지</title>
-</head>
-<body>
+{% block css %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'detail.css' %}">
+{% endblock css %}
+
+{% block content %}
     <div class="container">
         <h2>Title: {{post.title}} </h2>
         <h2>Content: {{post.content}} </h2>
     </div>
     
-    <a href= "{% url 'list' %}">목록</a>
+    <a href= "{% url 'list' %}">홈으로</a>
+    {% if user.is_authenticated and post.author.pk == user.pk%}
     <a href= "{% url 'edit' post.pk %}">수정</a>
     <a href= "{% url 'delete' post.pk %}">삭제</a>
-    
+    {% endif %}
+
+    {% if user.is_authenticated%}
     <form method="POST">
         {% csrf_token %}
         <input type="text" name="content" placeholder="댓글을 입력해주세요.">
         <button type="submit">작성</button>
     </form>
-   
+   {% endif %}
     {% for comment in post.comments.all %}
     <li>
         {{comment.content}}
+    {% if user.is_authenticated and post.author.pk == user.pk%}
         <a href="{% url 'delete-comment' post.pk comment.pk%}">삭제</a>
     </li>
-    {% endfor %}
+    {% endif %}{% endfor %}
+{% endblock content %}
 
 
 
-
-</body>
-</html>
