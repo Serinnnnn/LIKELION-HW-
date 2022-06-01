@@ -25,7 +25,3 @@ for (let key in salaries) {
 // 대괄호 표기법 -> object 가져오는 방식--객체가 반복문으로 출력하기때문에 하나의 key를 가져올 수 없으므로 . 으로 불러올 수 없다
 // 
 
-let sum = 0;
-for (let key in salaries) {
-  sum += salaries[key];
-}

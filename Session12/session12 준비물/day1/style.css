@@ -12,7 +12,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:gray;
+    background-color: pink;
+    
 }
 
 ul{
@@ -36,10 +37,11 @@ li{
     justify-content: center;
     background-color: beige;
     border:1px solid black;
+    border-radius: 20px;
 }
 .play{
-    color: #ffc600;
-    border-color: #ffc600;
+    color: salmon;
+    border-color: salmon;
     transform: scale(1.1);
     box-shadow: 0 0 10px #ffc600;
 }
