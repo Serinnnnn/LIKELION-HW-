@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button class="openBtn">멋사란?</button>
+<div class="modal hidden">
+  <div class="bg"></div>
+  <div class="modalBox">
+    <p>🦁NEXT x 멋쟁이 사자처럼 고려대학교🦁는
+컴퓨터 프로그래밍을 모르는 대학생들에게
+프로그래밍 교육을 제공해주며
+함께<br>IT 서비스를 만들어나가는 학회입니다.
+</p>
+    <button class="closeBtn">✖창 닫기</button>
+    <button class="modal-stop-button"> ✔️오늘 하루 보지 않기 </button>
+  </div>
+</div>
+
+<script>
+  const open = () => {
+    document.querySelector(".modal").classList.remove("hidden");
+  }
+
+  const close = () => {
+    document.querySelector(".modal").classList.add("hidden");
+  }
+
+  document.querySelector(".openBtn").addEventListener("click", open);
+  document.querySelector(".closeBtn").addEventListener("click", close);
+  document.querySelector(".bg").addEventListener("click", close);
+  document.querySelector(".modal-stop-button").addEventListener("click", close);
+
+  
+const setCookie = (name, value, expireDays) => {
+  let today = new Date();
+  today.setDate(today.getDate() + expireDays);
+
+  document.cookie = 
+  `${name}=${value};expires=${today.toGMTString()}`;
+};
+
+const getCookie = (name) => {
+
+  let cookie = document.cookie;
+  
+  if (document.cookie) {
+    let cookieArray = cookie.split(";");
+    for (let index in cookieArray){
+      let cookieName = cookieArray[index].split("=");
+      if(cookieName=[0]==name){
+        return cookieName[1];
+      }
+    }
+  }
+  return;
+};
+
+
+</script>
+</body>
+</html>
